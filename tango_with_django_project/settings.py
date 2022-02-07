@@ -115,7 +115,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+]
 
 # Static files (CSS, JavaScript, Images)
 STATICFILES_DIRS = [STATIC_DIR, ]
@@ -123,3 +128,4 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+LOGIN_URL = 'rango:login'
