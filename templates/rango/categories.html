@@ -4,12 +4,12 @@
         {% if c == current_category %}
         <li>
         <strong>
-            <a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a>
+            <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>
         </strong>
         </li>
         {% else %}
         <li>
-            <a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a>
+             <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>
         </li>
         {% endif %}
     {% endfor %}
